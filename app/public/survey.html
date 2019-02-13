@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Friend Finder</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
-    <!-- <script src="server.js"></script> -->
-</head>
-<body>
-    <h1>Survey Questions</h1>
-    <hr>
-    <h2><b>About You</b></h2>
-    <form>
-        <div class="form-group">
-            <label for="inputName">Name (Required)</label>
-            <input type="text" name="userChoiceName" value
+
+    <head>
+        <meta charset="utf-8">
+        <title>Friend Finder</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+            integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css"> -->
+        <!-- <script src="server.js"></script> -->
+    </head>
+
+    <body>
+        <div class="container">
+            <h2>Survey Questions</h2>
+            <hr>
+            <h3>About You</h3>
+            <form name="aboutYou">
+                <div class="form-group">
+                    <label for="personName">Name: <br>
+                        <small>*Required</small></label>
+                    <input type="text" name="name" class="form-control" id="personName" required>
+                </div>
+                <div class="form-group">
+                    <label for="personPhotoLink">Link to an image of you: <br>
+                        <small>*Required</small></label>
+                    <input type="url" name="photoLink" class="form-control" id="personPhotoLink"
+                        aria-describedby="urlHelp" required>
+                    <small id="urlHelp" class="form-text text-muted">e.g. http:// https:// etc...</small>
+                </div>
+            </form>
+            <hr>
+            <div id="questions">
+                <!-- Questions dynamically inserted here with Javascript -->
+            </div>
         </div>
-    </form>
-    
-</body>
+
+    </body>
+
 </html>
