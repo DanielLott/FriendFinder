@@ -1,1 +1,5 @@
-const friends = [];
+const friends = [
+    {
+
+    }
+];
